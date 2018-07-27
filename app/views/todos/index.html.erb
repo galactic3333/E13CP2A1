@@ -2,10 +2,10 @@
 <% @todos.each do |todo| %>
 	<div class="well">
 		<h1> <%= todo.description %> </h1>
-		<p> <%= todo.completed %> </p>
-		<h3> <%= link_to "Mostrar objeto todo", todo %> </h3>
-		<h3> <%= link_to "Editar objeto todo", edtodo_path(todo.id) %> </h3>
-		<h3> <%= link_to "Eliminar objeto todo", todo, method: :delete %> </h3>
-		<h3> <%= link_to "Marcar objeto todo como completado", comptodo_path(todo.id) %> </h3>
+		<h2> <%= todo.completed %> </h2>
+		<h3> <%= link_to "Mostrar objeto ToDo", todo %> </h3>
+		<h3> <%= link_to "Editar objeto ToDo", edtodo_path(todo.id) %> </h3>
+		<h3> <%= link_to "Eliminar objeto ToDo", todo, method: :delete %> </h3>
+		<a class="btn btn-primary" href="<%= comptodo_path(todo.id) %>">Marcar ToDo como completado</a>
 	</div>
 <% end %>
