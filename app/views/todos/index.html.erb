@@ -4,7 +4,8 @@
 		<h1> <%= todo.description %> </h1>
 		<p> <%= todo.completed %> </p>
 		<h3> <%= link_to "Mostrar objeto todo", todo %> </h3>
-		<h3> <%= link_to "Editar objeto todo", todo, method: :edit %> </h3>
+		<h3> <%= link_to "Editar objeto todo", edtodo_path(todo.id) %> </h3>
 		<h3> <%= link_to "Eliminar objeto todo", todo, method: :delete %> </h3>
+		<h3> <%= link_to "Marcar objeto todo como completado", comptodo_path(todo.id) %> </h3>
 	</div>
 <% end %>
